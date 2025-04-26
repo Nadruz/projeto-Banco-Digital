@@ -134,34 +134,34 @@ classDiagram
         + setNome()
     }
 
-    interface Conta {
-        + sacar(valor: double)
-        + depositar(valor: double)
-        + transferir(valor: double, destino: Conta)
+    class Conta {
+        + sacar()
+        + depositar()
+        + transferir()
         + imprimirExtrato()
     }
 
-    abstract class ContaBancaria {
+    class ContaBancaria {
         - static AGENCIA_PADRAO: int
         - static SEQUENCIAL: int
         # int agencia
         # int numero
         # double saldo
         # Cliente cliente
-        + ContaBancaria(cliente: Cliente)
-        + sacar(valor: double)
-        + depositar(valor: double)
-        + transferir(valor: double, destino: ContaBancaria)
+        + ContaBancaria()
+        + sacar()
+        + depositar()
+        + transferir()
         # imprimirInfosComuns()
     }
 
     class ContaCorrente {
-        + ContaCorrente(cliente: Cliente)
+        + ContaCorrente()
         + imprimirExtrato()
     }
 
     class ContaPoupanca {
-        + ContaPoupanca(cliente: Cliente)
+        + ContaPoupanca()
         + imprimirExtrato()
     }
 
